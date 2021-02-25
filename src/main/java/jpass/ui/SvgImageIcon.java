@@ -68,7 +68,8 @@ public class SvgImageIcon extends ImageIcon {
         }
         // load/get image
         try {
-            diagram = svgUniverse.getDiagram(url.toURI());
+            if (url != null)
+                diagram = svgUniverse.getDiagram(url.toURI());
         } catch (Exception ex) {
             LOG.log(Level.WARNING, String.format("Could not get SVG image [%s] due to [%s]", name, ex.getMessage()));
         }
@@ -85,13 +86,13 @@ public class SvgImageIcon extends ImageIcon {
     @Override
     public int getIconWidth() {
         update();
-        return (int)UIScale.scale((diagram != null) ? diagram.getWidth() : 16);
+        return (int) UIScale.scale((diagram != null) ? diagram.getWidth() : 16);
     }
 
     @Override
     public int getIconHeight() {
         update();
-        return (int)UIScale.scale((diagram != null) ? diagram.getHeight() : 16);
+        return (int) UIScale.scale((diagram != null) ? diagram.getHeight() : 16);
     }
 
     @Override
@@ -103,7 +104,7 @@ public class SvgImageIcon extends ImageIcon {
             return;
         }
 
-        Graphics2D g2 = (Graphics2D)g.create();
+        Graphics2D g2 = (Graphics2D) g.create();
         try {
             FlatUIUtils.setRenderingHints(g2);
             g2.setRenderingHint(RenderingHints.KEY_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_BILINEAR);
@@ -167,6 +168,6 @@ public class SvgImageIcon extends ImageIcon {
 
     private static void lafChanged() {
         LookAndFeel lookAndFeel = UIManager.getLookAndFeel();
-        darkLaf = (lookAndFeel instanceof FlatLaf && ((FlatLaf)lookAndFeel).isDark());
+        darkLaf = (lookAndFeel instanceof FlatLaf && ((FlatLaf) lookAndFeel).isDark());
     }
 }
