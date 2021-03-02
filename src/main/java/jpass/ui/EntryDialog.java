@@ -50,11 +50,10 @@ import javax.swing.SpringLayout;
 import javax.swing.WindowConstants;
 import javax.swing.border.EmptyBorder;
 
+import jpass.ui.helper.GenericHelper;
 import jpass.util.SpringUtilities;
 import jpass.util.StringUtils;
 import jpass.xml.bind.Entry;
-
-import static jpass.ui.helper.EntryHelper.copyEntryField;
 
 /**
  * A dialog with the entry data.
@@ -220,7 +219,7 @@ public class EntryDialog extends JDialog implements ActionListener {
                     this.repeatField.setText(password);
                 });
         } else if ("copy_button".equals(command)) {
-            copyEntryField(JPassFrame.getInstance(), String.valueOf(this.passwordField.getPassword()));
+            GenericHelper.copyEntryField(JPassFrame.getInstance(), String.valueOf(this.passwordField.getPassword()));
         }
     }
 

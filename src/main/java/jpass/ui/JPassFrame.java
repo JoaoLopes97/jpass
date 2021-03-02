@@ -33,6 +33,7 @@ import jpass.ui.action.CloseListener;
 import jpass.ui.action.MenuActionType;
 import jpass.ui.helper.EntryHelper;
 import jpass.ui.helper.FileHelper;
+import jpass.ui.helper.GenericHelper;
 import jpass.util.Configuration;
 import jpass.xml.bind.Entry;
 
@@ -295,7 +296,7 @@ public final class JPassFrame extends JFrame {
      */
     public void exitFrame() {
         if (Configuration.getInstance().is("clear.clipboard.on.exit.enabled", false)) {
-            EntryHelper.copyEntryField(this, null);
+            GenericHelper.copyEntryField(this, null);
         }
         if (this.processing) {
             return;

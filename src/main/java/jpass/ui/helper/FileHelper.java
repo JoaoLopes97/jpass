@@ -70,7 +70,7 @@ public final class FileHelper {
     private static final String OPERATION_ERROR_MESSAGE =
             "An error occured during the %s operation:\n%s";
     private static final String FILE_OVERWRITE_QUESTION_MESSAGE =
-            "File is already exists:\n%s\n\nDo you want to overwrite?";
+            "File is already exists:%n%s%n%nDo you want to overwrite?";
 
     private static final String JPASS_DATA_FILES = "JPass Data Files (*.jpass)";
     private static final String XML_FILES = "XML Files (*.xml)";

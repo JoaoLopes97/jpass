@@ -33,6 +33,8 @@ import jpass.ui.JPassFrame;
 import jpass.util.ClipboardUtils;
 import jpass.xml.bind.Entry;
 
+import java.awt.*;
+
 import static jpass.ui.MessageDialog.showErrorMessage;
 import static jpass.ui.MessageDialog.showWarningMessage;
 import static jpass.ui.MessageDialog.showQuestionMessage;
@@ -143,19 +145,5 @@ public final class EntryHelper {
         }
         String title = (String) parent.getEntryTitleTable().getValueAt(parent.getEntryTitleTable().getSelectedRow(), 0);
         return parent.getModel().getEntryByTitle(title);
-    }
-
-    /**
-     * Copy entry field value to clipboard.
-     *
-     * @param parent the parent frame
-     * @param content the content to copy
-     */
-    public static void copyEntryField(JPassFrame parent, String content) {
-        try {
-            ClipboardUtils.setClipboardContent(content);
-        } catch (Exception e) {
-            showErrorMessage(parent, e.getMessage());
-        }
     }
 }

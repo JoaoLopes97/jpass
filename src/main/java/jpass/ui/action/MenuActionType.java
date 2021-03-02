@@ -41,6 +41,7 @@ import jpass.ui.GeneratePasswordDialog;
 import jpass.ui.JPassFrame;
 import jpass.ui.MessageDialog;
 import jpass.ui.helper.EntryHelper;
+import jpass.ui.helper.GenericHelper;
 import jpass.xml.bind.Entry;
 
 import static javax.swing.KeyStroke.getKeyStroke;
@@ -173,7 +174,7 @@ public enum MenuActionType {
             JPassFrame parent = JPassFrame.getInstance();
             Entry entry = EntryHelper.getSelectedEntry(parent);
             if (entry != null) {
-                EntryHelper.copyEntryField(parent, entry.getUrl());
+                GenericHelper.copyEntryField(parent, entry.getUrl());
             }
         }
     }),
@@ -183,7 +184,7 @@ public enum MenuActionType {
             JPassFrame parent = JPassFrame.getInstance();
             Entry entry = EntryHelper.getSelectedEntry(parent);
             if (entry != null) {
-                EntryHelper.copyEntryField(parent, entry.getUser());
+                GenericHelper.copyEntryField(parent, entry.getUser());
             }
         }
     }),
@@ -193,14 +194,14 @@ public enum MenuActionType {
             JPassFrame parent = JPassFrame.getInstance();
             Entry entry = EntryHelper.getSelectedEntry(parent);
             if (entry != null) {
-                EntryHelper.copyEntryField(parent, entry.getPassword());
+                GenericHelper.copyEntryField(parent, entry.getPassword());
             }
         }
     }),
     CLEAR_CLIPBOARD(new AbstractMenuAction("Clear Clipboard", getIcon("clear"), getKeyStroke(KeyEvent.VK_X, CTRL_DOWN_MASK)) {
         @Override
         public void actionPerformed(ActionEvent ev) {
-            EntryHelper.copyEntryField(JPassFrame.getInstance(), null);
+            GenericHelper.copyEntryField(JPassFrame.getInstance(), null);
         }
     }),
     FIND_ENTRY(new AbstractMenuAction("Find Entry", getIcon("find"), getKeyStroke(KeyEvent.VK_F, CTRL_DOWN_MASK)) {

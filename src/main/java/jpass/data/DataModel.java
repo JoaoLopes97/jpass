@@ -120,7 +120,8 @@ public class DataModel {
     }
 
     public byte[] getPassword() {
-        return this.password;
+        DataModel dM = DataModel.getInstance();
+        return dM.password;
     }
 
     public void setPassword(byte[] password) {
