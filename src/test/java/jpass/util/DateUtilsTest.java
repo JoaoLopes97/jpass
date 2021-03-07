@@ -1,13 +1,10 @@
 package jpass.util;
 
-import org.junit.Before;
 import org.junit.Test;
 
 import java.time.format.DateTimeFormatter;
-import java.util.Date;
 
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotEquals;
 
 public class DateUtilsTest {
 
