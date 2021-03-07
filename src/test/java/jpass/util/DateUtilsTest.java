@@ -47,7 +47,6 @@ public class DateUtilsTest {
        String emptyFormat = "";
 
        String expectedFormatter = "ParseCaseSensitive(false)(Value(Year,4,10,EXCEEDS_PAD)'-'Value(MonthOfYear,2)'-'Value(DayOfMonth,2))[Offset(+HH:MM:ss,'Z')]";
-       expectedFormatter = "";
        
        DateTimeFormatter formatter = DateUtils.createFormatter(emptyFormat);
 

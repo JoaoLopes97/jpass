@@ -14,18 +14,7 @@ public class ClipBoardUtilsTest {
 		
 		assertEquals(expectedResult, ClipboardUtils.getClipboardContent());
 	}
-	
-	@Test
-	public void testeClipBoardContentIncorrect() throws Exception {
-		
-		String stringContent = "Novo conteudo!!";
-		String expectedResult =  "Novo conteudo!!";
-		
-		ClipboardUtils.setClipboardContent(stringContent);
-		
-		assertEquals(expectedResult, ClipboardUtils.getClipboardContent());
-	}
-	
+
 	@Test
 	public void testeClipBoardContentNull() throws Exception {
 		
