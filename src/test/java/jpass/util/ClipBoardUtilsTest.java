@@ -4,6 +4,8 @@ import org.junit.Test;
 
 public class ClipBoardUtilsTest {
 
+	//region ASSIGNMENT 1
+
 	@Test
 	public void testeClipBoardContentCorrect() throws Exception {
 		
@@ -36,5 +38,7 @@ public class ClipBoardUtilsTest {
 		
 		assertEquals(expectedResult, ClipboardUtils.getClipboardContent());
 	}
+
+	//endregion
 
 }

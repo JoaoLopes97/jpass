@@ -8,6 +8,7 @@ import static org.junit.Assert.assertEquals;
 
 public class DateUtilsTest {
 
+	//region ASSIGNMENT 1
 
     @Test
     public void shouldFormatValidFormatTest(){
@@ -183,9 +184,7 @@ public class DateUtilsTest {
 	  String result = DateUtils.formatIsoDateTime(dateStringNull, formatter);
       
 	  assertEquals(result,expectedResult);
-  } 
-   
-   
+  }
    
    
    
@@ -243,37 +242,9 @@ public class DateUtilsTest {
 	  String result = DateUtils.formatIsoDateTime(dateStringNull, formatter);
       
 	  assertEquals(result,expectedResult);
-  } 
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
-   
+  }
+
+	//endregion
    
    
    
