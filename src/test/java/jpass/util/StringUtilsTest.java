@@ -5,6 +5,8 @@ import static org.junit.Assert.assertEquals;
 
 public class StringUtilsTest {
 
+	//region ASSIGNMENT 1
+
 	// Lenght = 0
 	@Test
 	public void testeStripStringLenght0String10() {
@@ -134,4 +136,9 @@ public class StringUtilsTest {
 
         assertEquals("\uE0001234",result);
     }
+    //endregion
+
+	//region ASSIGNMENT 2
+
+	//endregion
 }
