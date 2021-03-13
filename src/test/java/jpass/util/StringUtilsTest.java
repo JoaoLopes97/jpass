@@ -12,9 +12,9 @@ public class StringUtilsTest {
 	public void StripStringLength0String10Test() {
 
 		int length0 =  0;
-		String stringEqqual10Char = "Teste da f...";
+		String stringEqqual10Char = "Teste da f";
 
-		String expectedResult = "Teste da f...";
+		String expectedResult = "...";
 		String resultFunction = StringUtils.stripString(stringEqqual10Char, length0);
 
 		assertEquals(expectedResult, resultFunction);
@@ -37,7 +37,7 @@ public class StringUtilsTest {
 	public void StripStringLength10String10Test() {
 
 		int length10 = 10;
-		String stringEqqual10Char = "Teste da f...";
+		String stringEqqual10Char = "Teste da f";
 
 		String expectedResult = "Teste da f";
 		String resultFunction = StringUtils.stripString(stringEqqual10Char, length10);
@@ -74,9 +74,9 @@ public class StringUtilsTest {
 	public void StripStringLength_2String10Test() {
 
 		int length_2 = -2;
-		String stringEqqual10Char = "Teste da f...";
+		String stringEqqual10Char = "Teste da f";
 
-		String expectedResult = "Teste da f";
+		String expectedResult = "Teste da f...";
 		String resultFunction = StringUtils.stripString(stringEqqual10Char, length_2);
 
 		assertEquals(expectedResult, resultFunction);
@@ -139,6 +139,227 @@ public class StringUtilsTest {
     //endregion
 
 	//region ASSIGNMENT 2
+    
+ // Lenght = 0	
+ 	@Test
+ 	public void stripStringLenght0StringCharTest() {
+
+ 		int length = 0;
+ 		String string = "Testedafunç";
+
+ 		String expectedResult = "...";
+ 		String resultFunction = StringUtils.stripString(string, length);
+
+ 		assertEquals(expectedResult, resultFunction);
+ 	}
+
+ 	@Test
+ 	public void stripStringLenght0StringNumberTest() {
+
+ 		int length = 0;
+ 		String string = "12345678910";
+
+ 		String expectedResult = "...";
+ 		String resultFunction = StringUtils.stripString(string, length);
+
+ 		assertEquals(expectedResult, resultFunction);
+ 	}
+
+ 	@Test
+ 	public void stripStringLenght0StringNumberCharTest() {
+
+ 		int length = 0;
+ 		String string = "Teste12funç";
+
+ 		String expectedResult = "...";
+ 		String resultFunction = StringUtils.stripString(string, length);
+
+ 		assertEquals(expectedResult, resultFunction);
+ 	}
+
+ 	// Lenght = 1
+ 	@Test
+ 	public void stripStringLenght1StringCharTest() {
+
+ 		int length = 1;
+ 		String string = "Testedafunç";
+
+ 		String expectedResult = "T...";
+ 		String resultFunction = StringUtils.stripString(string, length);
+
+ 		assertEquals(expectedResult, resultFunction);
+ 	}
+
+ 	@Test
+ 	public void stripStringLenght1StringNumberTest() {
+
+ 		int length = 1;
+ 		String string = "12345678910";
+
+ 		String expectedResult = "1...";
+ 		String resultFunction = StringUtils.stripString(string, length);
+
+ 		assertEquals(expectedResult, resultFunction);
+ 	}
+
+ 	@Test
+ 	public void stripStringLenght1StringNumberCharTest() {
+
+ 		int length = 1;
+ 		String string = "Teste12funç";
+
+ 		String expectedResult = "T...";
+ 		String resultFunction = StringUtils.stripString(string, length);
+
+ 		assertEquals(expectedResult, resultFunction);
+ 	}
+
+ 	// Lenght = 9
+ 	@Test
+ 	public void stripStringLenght9StringCharTest() {
+
+ 		int length = 9;
+ 		String string = "Testedafunç";
+
+ 		String expectedResult = "Testedafu...";
+ 		String resultFunction = StringUtils.stripString(string, length);
+
+ 		assertEquals(expectedResult, resultFunction);
+ 	}
+
+ 	@Test
+ 	public void stripStringLenght9StringNumberTest() {
+
+ 		int length = 9;
+ 		String string = "12345678910";
+
+ 		String expectedResult = "123456789...";
+ 		String resultFunction = StringUtils.stripString(string, length);
+
+ 		assertEquals(expectedResult, resultFunction);
+ 	}
+
+ 	@Test
+ 	public void stripStringLenght9StringNumberCharTest() {
+
+ 		int length = 9;
+ 		String string = "Teste12funç";
+
+ 		String expectedResult = "Teste12fu...";
+ 		String resultFunction = StringUtils.stripString(string, length);
+
+ 		assertEquals(expectedResult, resultFunction);
+ 	}
+
+ 	// Lenght = 10
+ 	@Test
+ 	public void stripStringLenght10StringCharTest() {
+
+ 		int length = 10;
+ 		String string = "Testedafunç";
+
+ 		String expectedResult = "Testedafun...";
+ 		String resultFunction = StringUtils.stripString(string, length);
+
+ 		assertEquals(expectedResult, resultFunction);
+ 	}
+
+ 	@Test
+ 	public void stripStringLenght10StringNumberTest() {
+
+ 		int length = 10;
+ 		String string = "12345678910";
+
+ 		String expectedResult = "1234567891...";
+ 		String resultFunction = StringUtils.stripString(string, length);
+
+ 		assertEquals(expectedResult, resultFunction);
+ 	}
+
+ 	@Test
+ 	public void stripStringLenght10StringNumberCharTest() {
+
+ 		int length = 10;
+ 		String string = "Teste12funç";
+
+ 		String expectedResult = "Teste12fun...";
+ 		String resultFunction = StringUtils.stripString(string, length);
+
+ 		assertEquals(expectedResult, resultFunction);
+ 	}
+
+ 	// Lenght = 11
+ 	@Test
+ 	public void stripStringLenght11StringCharTest() {
+
+ 		int length = 11;
+ 		String string = "Testedafunç";
+
+ 		String expectedResult = "Testedafunç";
+ 		String resultFunction = StringUtils.stripString(string, length);
+
+ 		assertEquals(expectedResult, resultFunction);
+ 	}
+
+ 	@Test
+ 	public void stripStringLenght11StringNumberTest() {
+
+ 		int length = 11;
+ 		String string = "12345678910";
+
+ 		String expectedResult = "12345678910";
+ 		String resultFunction = StringUtils.stripString(string, length);
+
+ 		assertEquals(expectedResult, resultFunction);
+ 	}
+
+ 	@Test
+ 	public void stripStringLenght11StringNumberCharTest() {
+
+ 		int length = 11;
+ 		String string = "Teste12funç";
+
+ 		String expectedResult = "Teste12funç";
+ 		String resultFunction = StringUtils.stripString(string, length);
+
+ 		assertEquals(expectedResult, resultFunction);
+ 	}
+ 	
+ 	@Test
+ 	public void nullStripNonValidXMLCharactersTest() {
+
+ 		String string = null;
+
+ 		String expectedResult = "";
+ 		String resultFunction = StringUtils.stripNonValidXMLCharacters(string);
+
+ 		assertEquals(expectedResult, resultFunction);
+ 	}
+ 	
+ 	@Test
+ 	public void emptyStripNonValidXMLCharactersTest() {
+
+ 		String string = "";
+
+ 		String expectedResult = "";
+ 		String resultFunction = StringUtils.stripNonValidXMLCharacters(string);
+
+ 		assertEquals(expectedResult, resultFunction);
+ 	}
+ 	
+ 	@Test
+ 	public void string1CharStripNonValidXMLCharactersTest() {
+
+ 		char validChar = 0X20;
+        String input = Character.toString(validChar);
+
+ 		String expectedResult = " ";
+ 		String resultFunction = StringUtils.stripNonValidXMLCharacters(input);
+
+ 		assertEquals(expectedResult, resultFunction);
+ 	}
+
+ 	// endregion
 
 	//endregion
 }
