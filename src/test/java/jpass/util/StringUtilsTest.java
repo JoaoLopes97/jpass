@@ -7,9 +7,9 @@ public class StringUtilsTest {
 
 	//region ASSIGNMENT 1
 
-	// Lenght = 0
+	// Length = 0
 	@Test
-	public void testeStripStringLenght0String10() {
+	public void StripStringLength0String10Test() {
 
 		int length0 =  0;
 		String stringEqqual10Char = "Teste da f...";
@@ -21,7 +21,7 @@ public class StringUtilsTest {
 	}
 
 	@Test
-	public void testeStripStringLenght0String0() {
+	public void StripStringLength0String0Test() {
 
 		int length0 =  0;
 		String string0Char = "";
@@ -32,9 +32,9 @@ public class StringUtilsTest {
 		assertEquals(expectedResult, resultFunction);
 	}
 
-	// Lenght = 10
+	// Length = 10
 	@Test
-	public void testeStripStringLenght10String10() {
+	public void StripStringLength10String10Test() {
 
 		int length10 = 10;
 		String stringEqqual10Char = "Teste da f...";
@@ -46,7 +46,7 @@ public class StringUtilsTest {
 	}
 
 	@Test
-	public void testeStripStringLenght10StringLess10() {
+	public void StripStringLength10StringLess10Test() {
 
 		int length10 = 10;
 		String stringLess10Char = "Teste";
@@ -58,7 +58,7 @@ public class StringUtilsTest {
 	}
 
 	@Test
-	public void testeStripStringLenght10StringBigger10() {
+	public void StripStringLength10StringBigger10Test() {
 
 		int length10 = 10;
 		String stringBigger10Char = "Teste da fun��o com mais de 10 caracteres.";
@@ -69,9 +69,9 @@ public class StringUtilsTest {
 		assertEquals(expectedResult, resultFunction);
 	}
 
-	// Lenght = 10
+	// Length = 10
 	@Test
-	public void testeStripStringLenght_2String10() {
+	public void StripStringLength_2String10Test() {
 
 		int length_2 = -2;
 		String stringEqqual10Char = "Teste da f...";
@@ -83,7 +83,7 @@ public class StringUtilsTest {
 	}
 
 	@Test
-	public void testeStripStringNull() {
+	public void StripStringNullTest() {
 
 		int length10 = 10;
 		String stringNull = null;

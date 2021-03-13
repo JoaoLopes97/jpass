@@ -7,7 +7,7 @@ public class ClipBoardUtilsTest {
 	//region ASSIGNMENT 1
 
 	@Test
-	public void testeClipBoardContentCorrect() throws Exception {
+	public void ClipBoardContentCorrectTest() throws Exception {
 		
 		String stringContent = "Novo conteudo!!";
 		String expectedResult =  "Novo conteudo!!";
@@ -18,7 +18,7 @@ public class ClipBoardUtilsTest {
 	}
 
 	@Test
-	public void testeClipBoardContentNull() throws Exception {
+	public void ClipBoardContentNullTest() throws Exception {
 		
 		String stringContent = null;
 		String expectedResult =  null;
@@ -29,7 +29,7 @@ public class ClipBoardUtilsTest {
 	}
 	
 	@Test
-	public void testeClipBoardContentEmpty() throws Exception {
+	public void ClipBoardContentEmptyTest() throws Exception {
 		
 		String stringContent = "";
 		String expectedResult =  null;
@@ -38,6 +38,10 @@ public class ClipBoardUtilsTest {
 		
 		assertEquals(expectedResult, ClipboardUtils.getClipboardContent());
 	}
+
+	//endregion
+
+	//region ASSIGNMENT 2
 
 	//endregion
 
