@@ -70,7 +70,7 @@ public class StringUtilsTest {
 	}
 
 	// Length = 10
-	@Test
+	@Test(expected = StringIndexOutOfBoundsException.class)
 	public void StripStringLength_2String10Test() {
 
 		int length_2 = -2;
@@ -145,7 +145,7 @@ public class StringUtilsTest {
  	public void stripStringLenght0StringCharTest() {
 
  		int length = 0;
- 		String string = "Testedafunç";
+ 		String string = "Testedafunï¿½";
 
  		String expectedResult = "...";
  		String resultFunction = StringUtils.stripString(string, length);
@@ -169,7 +169,7 @@ public class StringUtilsTest {
  	public void stripStringLenght0StringNumberCharTest() {
 
  		int length = 0;
- 		String string = "Teste12funç";
+ 		String string = "Teste12funï¿½";
 
  		String expectedResult = "...";
  		String resultFunction = StringUtils.stripString(string, length);
@@ -182,7 +182,7 @@ public class StringUtilsTest {
  	public void stripStringLenght1StringCharTest() {
 
  		int length = 1;
- 		String string = "Testedafunç";
+ 		String string = "Testedafunï¿½";
 
  		String expectedResult = "T...";
  		String resultFunction = StringUtils.stripString(string, length);
@@ -206,7 +206,7 @@ public class StringUtilsTest {
  	public void stripStringLenght1StringNumberCharTest() {
 
  		int length = 1;
- 		String string = "Teste12funç";
+ 		String string = "Teste12funï¿½";
 
  		String expectedResult = "T...";
  		String resultFunction = StringUtils.stripString(string, length);
@@ -219,7 +219,7 @@ public class StringUtilsTest {
  	public void stripStringLenght9StringCharTest() {
 
  		int length = 9;
- 		String string = "Testedafunç";
+ 		String string = "Testedafunï¿½";
 
  		String expectedResult = "Testedafu...";
  		String resultFunction = StringUtils.stripString(string, length);
@@ -243,7 +243,7 @@ public class StringUtilsTest {
  	public void stripStringLenght9StringNumberCharTest() {
 
  		int length = 9;
- 		String string = "Teste12funç";
+ 		String string = "Teste12funï¿½";
 
  		String expectedResult = "Teste12fu...";
  		String resultFunction = StringUtils.stripString(string, length);
@@ -256,7 +256,7 @@ public class StringUtilsTest {
  	public void stripStringLenght10StringCharTest() {
 
  		int length = 10;
- 		String string = "Testedafunç";
+ 		String string = "Testedafunï¿½";
 
  		String expectedResult = "Testedafun...";
  		String resultFunction = StringUtils.stripString(string, length);
@@ -280,7 +280,7 @@ public class StringUtilsTest {
  	public void stripStringLenght10StringNumberCharTest() {
 
  		int length = 10;
- 		String string = "Teste12funç";
+ 		String string = "Teste12funï¿½";
 
  		String expectedResult = "Teste12fun...";
  		String resultFunction = StringUtils.stripString(string, length);
@@ -293,9 +293,9 @@ public class StringUtilsTest {
  	public void stripStringLenght11StringCharTest() {
 
  		int length = 11;
- 		String string = "Testedafunç";
+ 		String string = "Testedafunï¿½";
 
- 		String expectedResult = "Testedafunç";
+ 		String expectedResult = "Testedafunï¿½";
  		String resultFunction = StringUtils.stripString(string, length);
 
  		assertEquals(expectedResult, resultFunction);
@@ -317,9 +317,9 @@ public class StringUtilsTest {
  	public void stripStringLenght11StringNumberCharTest() {
 
  		int length = 11;
- 		String string = "Teste12funç";
+ 		String string = "Teste12funï¿½";
 
- 		String expectedResult = "Teste12funç";
+ 		String expectedResult = "Teste12funï¿½";
  		String resultFunction = StringUtils.stripString(string, length);
 
  		assertEquals(expectedResult, resultFunction);
