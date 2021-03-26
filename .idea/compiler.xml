@@ -9,6 +9,8 @@
         <module name="jpass" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="1.8" />
+    <bytecodeTargetLevel>
+      <module name="jpass" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>

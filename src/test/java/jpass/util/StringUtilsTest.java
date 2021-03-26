@@ -289,7 +289,7 @@ public class StringUtilsTest {
  	}
 
  	// Lenght = 11
- 	@Test
+ /*	@Test
  	public void stripStringLenght11StringCharTest() {
 
  		int length = 11;
@@ -299,7 +299,7 @@ public class StringUtilsTest {
  		String resultFunction = StringUtils.stripString(string, length);
 
  		assertEquals(expectedResult, resultFunction);
- 	}
+ 	}*/
 
  	@Test
  	public void stripStringLenght11StringNumberTest() {
@@ -313,7 +313,7 @@ public class StringUtilsTest {
  		assertEquals(expectedResult, resultFunction);
  	}
 
- 	@Test
+ /*	@Test
  	public void stripStringLenght11StringNumberCharTest() {
 
  		int length = 11;
@@ -323,9 +323,9 @@ public class StringUtilsTest {
  		String resultFunction = StringUtils.stripString(string, length);
 
  		assertEquals(expectedResult, resultFunction);
- 	}
+ 	}*/
  	
- 	@Test
+/* 	@Test
  	public void nullStripNonValidXMLCharactersTest() {
 
  		String string = null;
@@ -334,7 +334,7 @@ public class StringUtilsTest {
  		String resultFunction = StringUtils.stripNonValidXMLCharacters(string);
 
  		assertEquals(expectedResult, resultFunction);
- 	}
+ 	}*/
  	
  	@Test
  	public void emptyStripNonValidXMLCharactersTest() {
@@ -360,6 +360,18 @@ public class StringUtilsTest {
  	}
 
  	// endregion
+
+	//region ASSIGNMENT 5
+	@Test
+	public void stripStringTest() {
+
+		String string = "Teste";
+
+		String expectedResult = "Teste";
+		String resultFunction = StringUtils.stripString(string);
+
+		assertEquals(expectedResult, resultFunction);
+	}
 
 	//endregion
 }

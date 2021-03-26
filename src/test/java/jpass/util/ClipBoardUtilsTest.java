@@ -2,6 +2,8 @@ package jpass.util;
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
+import static org.mockito.Mockito.*;
+
 public class ClipBoardUtilsTest {
 
 	//region ASSIGNMENT 1
@@ -11,9 +13,9 @@ public class ClipBoardUtilsTest {
 		
 		String stringContent = "Novo conteudo!!";
 		String expectedResult =  "Novo conteudo!!";
-		
+
 		ClipboardUtils.setClipboardContent(stringContent);
-		
+
 		assertEquals(expectedResult, ClipboardUtils.getClipboardContent());
 	}
 
@@ -24,7 +26,7 @@ public class ClipBoardUtilsTest {
 		String expectedResult =  null;
 		
 		ClipboardUtils.setClipboardContent(stringContent);
-		
+
 		assertEquals(expectedResult, ClipboardUtils.getClipboardContent());
 	}
 	
@@ -117,4 +119,12 @@ public class ClipBoardUtilsTest {
 	}
 	//endregion
 
+	//region ASSIGNMENT 5
+
+	@Test
+	public void clipboardTest(){
+
+	}
+
+	//endregion
 }
