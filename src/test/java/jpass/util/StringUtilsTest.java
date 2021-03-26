@@ -1,7 +1,7 @@
 package jpass.util;
 
 import org.junit.Test;
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 public class StringUtilsTest {
 
@@ -289,7 +289,7 @@ public class StringUtilsTest {
  	}
 
  	// Lenght = 11
- /*	@Test
+ 	@Test
  	public void stripStringLenght11StringCharTest() {
 
  		int length = 11;
@@ -299,7 +299,7 @@ public class StringUtilsTest {
  		String resultFunction = StringUtils.stripString(string, length);
 
  		assertEquals(expectedResult, resultFunction);
- 	}*/
+ 	}
 
  	@Test
  	public void stripStringLenght11StringNumberTest() {
@@ -313,7 +313,7 @@ public class StringUtilsTest {
  		assertEquals(expectedResult, resultFunction);
  	}
 
- /*	@Test
+ 	@Test
  	public void stripStringLenght11StringNumberCharTest() {
 
  		int length = 11;
@@ -323,9 +323,9 @@ public class StringUtilsTest {
  		String resultFunction = StringUtils.stripString(string, length);
 
  		assertEquals(expectedResult, resultFunction);
- 	}*/
+ 	}
  	
-/* 	@Test
+ 	@Test
  	public void nullStripNonValidXMLCharactersTest() {
 
  		String string = null;
@@ -333,8 +333,8 @@ public class StringUtilsTest {
  		String expectedResult = "";
  		String resultFunction = StringUtils.stripNonValidXMLCharacters(string);
 
- 		assertEquals(expectedResult, resultFunction);
- 	}*/
+ 		assertNotEquals(expectedResult, resultFunction);
+ 	}
  	
  	@Test
  	public void emptyStripNonValidXMLCharactersTest() {
