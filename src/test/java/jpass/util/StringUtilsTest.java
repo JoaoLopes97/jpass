@@ -362,6 +362,7 @@ public class StringUtilsTest {
  	// endregion
 
 	//region ASSIGNMENT 5
+
 	@Test
 	public void stripStringTest() {
 
@@ -373,5 +374,75 @@ public class StringUtilsTest {
 		assertEquals(expectedResult, resultFunction);
 	}
 
+	@Test
+	public void shouldNotStripValid2Chars(){
+
+		char validChar = 0x9;
+		String input = Character.toString(validChar);
+		input += "1234";
+
+		String result = StringUtils.stripNonValidXMLCharacters(input);
+
+		assertEquals("\t1234",result);
+	}
+
+	@Test
+	public void shouldNotStripValid3Chars(){
+
+		char validChar = 0xA;
+		String input = Character.toString(validChar);
+		input += "1234";
+
+		String result = StringUtils.stripNonValidXMLCharacters(input);
+
+		assertEquals("\n1234",result);
+	}
+
+	@Test
+	public void shouldNotStripValid4Chars(){
+
+		char validChar = 0xD;
+		String input = Character.toString(validChar);
+		input += "1234";
+
+		String result = StringUtils.stripNonValidXMLCharacters(input);
+
+		assertEquals("\r1234",result);
+	}
+	@Test
+	public void shouldNotStripValid5Chars(){
+
+		char validChar = 0x20;
+		String input = Character.toString(validChar);
+		input += "1234";
+
+		String result = StringUtils.stripNonValidXMLCharacters(input);
+
+		assertEquals(" 1234",result);
+	}
+
+	@Test
+	public void shouldNotStripValid6Chars(){
+
+		char validChar = 0xD7FF;
+		String input = Character.toString(validChar);
+		input += "1234";
+
+		String result = StringUtils.stripNonValidXMLCharacters(input);
+
+		assertEquals("\uD7FF1234",result);
+	}
+
+	@Test
+	public void shouldNotStripValid7Chars(){
+
+		char validChar = 0xFFFD;
+		String input = Character.toString(validChar);
+		input += "1234";
+
+		String result = StringUtils.stripNonValidXMLCharacters(input);
+
+		assertEquals("\uFFFD1234",result);
+	}
 	//endregion
 }

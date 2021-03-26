@@ -1,6 +1,11 @@
 package jpass.util;
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
+import org.junit.rules.ExpectedException;
+
+import javax.tools.Tool;
+import java.awt.*;
+import java.awt.datatransfer.StringSelection;
 
 import static org.mockito.Mockito.*;
 
@@ -122,9 +127,12 @@ public class ClipBoardUtilsTest {
 	//region ASSIGNMENT 5
 
 	@Test
-	public void clipboardTest(){
+	public void GetClipboardContentThrowableExceptionTest() throws Exception {
+		ClipboardUtils.clearClipboardContent();
+
+		String result = ClipboardUtils.getClipboardContent();
+
 
 	}
-
 	//endregion
 }

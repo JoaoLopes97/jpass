@@ -50,10 +50,10 @@ public class Entries {
      * @return list of {@link Entry} objects
      */
     public List<Entry> getEntry() {
-        if (entry == null) {
-            entry = new ArrayList<>();
-        }
-        return this.entry;
+            if (entry == null) {
+                entry = new ArrayList<>();
+            }
+            return this.entry;
     }
 
 }

@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.Random;
 
+import jpass.util.CryptUtils;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -53,7 +54,43 @@ public class StreamTest {
         decrypted.close();
         decrypter.close();
 
-        Assert.assertEquals(plain.length, decrypted.toByteArray().length);
+        Assert.assertEquals(100, decrypted.toByteArray().length);
+        Assert.assertTrue(Arrays.equals(plain, decrypted.toByteArray()));
+    }
+
+    @Test
+    public void shouldDecryptAnEncryptedMessage() throws IOException {
+        byte[] key = new byte[32];
+        Random rnd = new Random();
+        rnd.nextBytes(key);
+
+
+        ByteArrayOutputStream encrypted = new ByteArrayOutputStream();
+
+        byte[] iv = new byte[16];
+        Random rndt = CryptUtils.newRandomNumberGenerator();
+        rndt.nextBytes(iv);
+        encrypted.write(iv);
+
+        CryptOutputStream output = new CryptOutputStream(encrypted, key,iv);
+
+        byte[] plain = new byte[DATA_SIZE];
+        rnd.nextBytes(plain);
+
+        output.write(plain);
+        output.close();
+
+        CryptInputStream decrypter = new CryptInputStream(new ByteArrayInputStream(encrypted.toByteArray()), key);
+        ByteArrayOutputStream decrypted = new ByteArrayOutputStream();
+
+        int read;
+        while ((read = decrypter.read()) >= 0) {
+            decrypted.write(read);
+        }
+        decrypted.close();
+        decrypter.close();
+
+        Assert.assertEquals(100, decrypted.toByteArray().length);
         Assert.assertTrue(Arrays.equals(plain, decrypted.toByteArray()));
     }
 }
