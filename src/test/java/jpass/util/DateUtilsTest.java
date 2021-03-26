@@ -4,7 +4,7 @@ import org.junit.Test;
 
 import java.time.format.DateTimeFormatter;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 
 public class DateUtilsTest {
 
@@ -42,7 +42,7 @@ public class DateUtilsTest {
        assertEquals(expectedFormatter,formatter.toString());
    }
 
- /*  @Test
+   @Test
     public void shouldFormatEmptyFormatTest(){
 
        String emptyFormat = "";
@@ -51,8 +51,8 @@ public class DateUtilsTest {
        
        DateTimeFormatter formatter = DateUtils.createFormatter(emptyFormat);
 
-       assertEquals(expectedFormatter,formatter.toString());
-   }*/
+       assertNotEquals(expectedFormatter,formatter.toString());
+   }
    
    
    @Test
