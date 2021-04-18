@@ -260,7 +260,30 @@ public class DateUtilsTest {
 		assertEquals(result,expectedResult);
 	}
 	//endregion
-   
+
+
+	//region ASSIGNMENT 8
+	@Test
+	public void createFormatterDataflow(){
+
+		String validFormat = "dd.MM.yyyy";
+		String expectedFormatter = "Value(DayOfMonth,2)'.'Value(MonthOfYear,2)'.'Value(YearOfEra,4,19,EXCEEDS_PAD)";
+
+		DateTimeFormatter formatter = DateUtils.createFormatter(validFormat);
+
+		assertEquals(expectedFormatter,formatter.toString());
+	}
+
+	@Test
+	public void createFormatterDataflow2(){
+
+		String expectedFormatter = "ParseCaseSensitive(false)(Value(Year,4,10,EXCEEDS_PAD)'-'Value(MonthOfYear,2)'-'Value(DayOfMonth,2))[Offset(+HH:MM:ss,'Z')]";
+
+		DateTimeFormatter formatter = DateUtils.createFormatter(null);
+
+		assertEquals(expectedFormatter,formatter.toString());
+	}
+	//endregion
    
    
 }

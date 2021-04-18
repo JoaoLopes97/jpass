@@ -135,4 +135,39 @@ public class ClipBoardUtilsTest {
 
 	}
 	//endregion
+
+	//region ASSIGNMENT 8
+
+	@Test
+	public void ClipBoardContentDataflow1() throws Exception {
+
+		String stringContent = "Novo conteudo!!";
+		String expectedResult =  "Novo conteudo!!";
+
+		ClipboardUtils.setClipboardContent(stringContent);
+
+		assertEquals(expectedResult, ClipboardUtils.getClipboardContent());
+	}
+
+
+	@Test
+	public void ClipBoardContentDataflow2() throws Exception {
+		ClipboardUtils.clearClipboardContent();
+
+		String result = ClipboardUtils.getClipboardContent();
+
+
+	}
+
+	@Test
+	public void ClipBoardContentDataflow3() throws Exception {
+
+		String stringContent = "";
+		String expectedResult =  null;
+
+		ClipboardUtils.setClipboardContent(stringContent);
+
+		assertEquals(expectedResult, ClipboardUtils.getClipboardContent());
+	}
+	//endregion
 }
