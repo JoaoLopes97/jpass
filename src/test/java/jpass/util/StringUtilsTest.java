@@ -445,4 +445,60 @@ public class StringUtilsTest {
 		assertEquals("\uFFFD1234",result);
 	}
 	//endregion
+	
+	//region ASSIGNMENT 8
+
+	// Length = 10
+	@Test
+	public void StripStringLength10String10TestDataFlow() {
+
+		int length10 = 10;
+		String stringEqqual10Char = "Teste da f";
+
+		String expectedResult = "Teste da f";
+		String resultFunction = StringUtils.stripString(stringEqqual10Char, length10);
+
+		assertEquals(expectedResult, resultFunction);
+	}
+
+	@Test
+	public void StripStringLength10StringBigger10TestDataFlow() {
+
+		int length10 = 10;
+		String stringBigger10Char = "Teste da fun��o com mais de 10 caracteres.";
+
+		String expectedResult = "Teste da f...";
+		String resultFunction = StringUtils.stripString(stringBigger10Char, length10);
+
+		assertEquals(expectedResult, resultFunction);
+	}
+	
+
+ 	@Test
+ 	public void stripStringLenght1StringNumberCharTestDataFlow() {
+
+ 		int length = 1;
+ 		String string = "Teste12fun�";
+
+ 		String expectedResult = "T...";
+ 		String resultFunction = StringUtils.stripString(string, length);
+
+ 		assertEquals(expectedResult, resultFunction);
+ 	}
+
+ 	// Lenght = 9
+ 	@Test
+ 	public void stripStringLenght9StringCharTestDataFlow() {
+
+ 		int length = 9;
+ 		String string = "Testedafun�";
+
+ 		String expectedResult = "Testedafu...";
+ 		String resultFunction = StringUtils.stripString(string, length);
+
+ 		assertEquals(expectedResult, resultFunction);
+ 	}
+ 	
+	//endregion
+	
 }
