@@ -59,9 +59,9 @@ import javax.swing.SwingConstants;
 import javax.swing.WindowConstants;
 import javax.swing.border.EmptyBorder;
 
-import jpass.util.CryptUtils;
+import jpass.util.mutation.CryptUtils;
 import jpass.util.SpringUtilities;
-import jpass.util.StringUtils;
+import jpass.util.mutation.StringUtils;
 
 /**
  * Utility class for displaying message dialog.

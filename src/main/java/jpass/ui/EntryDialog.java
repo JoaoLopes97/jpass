@@ -52,7 +52,7 @@ import javax.swing.border.EmptyBorder;
 
 import jpass.ui.helper.GenericHelper;
 import jpass.util.SpringUtilities;
-import jpass.util.StringUtils;
+import jpass.util.mutation.StringUtils;
 import jpass.xml.bind.Entry;
 
 /**

@@ -35,7 +35,7 @@ import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
 
 import jpass.ui.JPassFrame;
-import jpass.util.Configuration;
+import jpass.util.mutation.Configuration;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JDialog;

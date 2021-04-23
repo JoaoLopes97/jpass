@@ -1,12 +1,10 @@
-package jpass.util;
+package jpass.util.mutation;
 
 import static org.junit.Assert.assertEquals;
+
+import jpass.util.mutation.CryptUtils;
 import org.junit.Test;
-import org.mockito.Mockito;
 
-import java.security.SecureRandom;
-
-import static org.mockito.Mockito.*;
 public class CryptUtilsTest {
 
     @Test

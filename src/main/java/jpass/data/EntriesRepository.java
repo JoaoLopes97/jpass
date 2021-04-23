@@ -44,7 +44,7 @@ import jpass.crypt.io.CryptOutputStream;
 import jpass.xml.bind.Entries;
 import jpass.xml.converter.XmlConverter;
 
-import static jpass.util.StringUtils.stripString;
+import static jpass.util.mutation.StringUtils.stripString;
 
 /**
  * Repository class for reading and writing (encrypted) XML documents.

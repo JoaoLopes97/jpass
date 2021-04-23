@@ -46,7 +46,7 @@ import static jpass.ui.MessageDialog.YES_NO_OPTION;
 import static jpass.ui.MessageDialog.YES_OPTION;
 import static jpass.ui.MessageDialog.YES_NO_CANCEL_OPTION;
 import static jpass.ui.MessageDialog.NO_OPTION;
-import static jpass.util.StringUtils.stripString;
+import static jpass.util.mutation.StringUtils.stripString;
 
 import static java.lang.String.format;
 

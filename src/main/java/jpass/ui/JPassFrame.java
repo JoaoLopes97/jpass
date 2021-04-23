@@ -31,10 +31,9 @@ package jpass.ui;
 import jpass.data.DataModel;
 import jpass.ui.action.CloseListener;
 import jpass.ui.action.MenuActionType;
-import jpass.ui.helper.EntryHelper;
 import jpass.ui.helper.FileHelper;
 import jpass.ui.helper.GenericHelper;
-import jpass.util.Configuration;
+import jpass.util.mutation.Configuration;
 import jpass.xml.bind.Entry;
 
 import java.awt.BorderLayout;

@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.Random;
 
-import jpass.util.CryptUtils;
+import jpass.util.mutation.CryptUtils;
 import org.junit.Assert;
 import org.junit.Test;
 

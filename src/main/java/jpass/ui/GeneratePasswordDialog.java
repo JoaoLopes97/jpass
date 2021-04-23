@@ -50,8 +50,8 @@ import javax.swing.SpringLayout;
 import javax.swing.WindowConstants;
 import javax.swing.border.TitledBorder;
 
-import jpass.util.Configuration;
-import jpass.util.CryptUtils;
+import jpass.util.mutation.Configuration;
+import jpass.util.mutation.CryptUtils;
 import jpass.util.SpringUtilities;
 
 /**

@@ -35,7 +35,7 @@ import java.io.OutputStream;
 import java.util.Random;
 
 import jpass.crypt.Cbc;
-import jpass.util.CryptUtils;
+import jpass.util.mutation.CryptUtils;
 
 /**
  * Encrypts the passed data and stores it into the underlying {@link java.io.OutputStream}. If no

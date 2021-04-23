@@ -41,8 +41,8 @@ import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableCellRenderer;
 import javax.swing.table.TableColumn;
 import jpass.ui.action.TableListener;
-import jpass.util.Configuration;
-import jpass.util.DateUtils;
+import jpass.util.mutation.Configuration;
+import jpass.util.mutation.DateUtils;
 import jpass.xml.bind.Entry;
 
 /**

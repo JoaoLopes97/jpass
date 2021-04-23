@@ -1,5 +1,6 @@
-package jpass.util;
+package jpass.util.mutation;
 
+import jpass.util.mutation.Configuration;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
